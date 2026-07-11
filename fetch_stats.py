@@ -25,6 +25,7 @@ STAT_MAP = {
     "stone":   ["harvested_stones", "harvested_stone"],
     "metal":   ["acquired_metal.ore", "harvested_metal.ore"],
     "scrap":   ["acquired_scrap"],
+    "sulfur":  ["acquired_sulfur.ore", "harvested_sulfur.ore", "harvested_sulfur"],
     "barrels": ["destroyed_barrels", "barrels_destroyed"],
     "builds":  ["placed_blocks", "blocks_placed"],
 }
