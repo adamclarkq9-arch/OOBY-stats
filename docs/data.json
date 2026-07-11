@@ -1,0 +1,86 @@
+{
+  "updated": null,
+  "placeholder": true,
+  "players": [
+    {
+      "steamid": "76561198328433034",
+      "name": "Awaiting first update",
+      "avatar": "",
+      "profile_url": "https://steamcommunity.com/profiles/76561198328433034",
+      "private": false,
+      "stats": {
+        "hours": 0,
+        "kills": 0,
+        "deaths": 0,
+        "kd": 0,
+        "wood": 0,
+        "stone": 0,
+        "metal": 0,
+        "scrap": 0,
+        "barrels": 0,
+        "builds": 0
+      },
+      "label": "Player 1"
+    },
+    {
+      "steamid": "76561198329843176",
+      "name": "Awaiting first update",
+      "avatar": "",
+      "profile_url": "https://steamcommunity.com/profiles/76561198329843176",
+      "private": false,
+      "stats": {
+        "hours": 0,
+        "kills": 0,
+        "deaths": 0,
+        "kd": 0,
+        "wood": 0,
+        "stone": 0,
+        "metal": 0,
+        "scrap": 0,
+        "barrels": 0,
+        "builds": 0
+      },
+      "label": "Player 2"
+    },
+    {
+      "steamid": "76561198982508980",
+      "name": "Awaiting first update",
+      "avatar": "",
+      "profile_url": "https://steamcommunity.com/profiles/76561198982508980",
+      "private": false,
+      "stats": {
+        "hours": 0,
+        "kills": 0,
+        "deaths": 0,
+        "kd": 0,
+        "wood": 0,
+        "stone": 0,
+        "metal": 0,
+        "scrap": 0,
+        "barrels": 0,
+        "builds": 0
+      },
+      "label": "Player 3"
+    },
+    {
+      "steamid": "76561199044926383",
+      "name": "Awaiting first update",
+      "avatar": "",
+      "profile_url": "https://steamcommunity.com/profiles/76561199044926383",
+      "private": false,
+      "stats": {
+        "hours": 0,
+        "kills": 0,
+        "deaths": 0,
+        "kd": 0,
+        "wood": 0,
+        "stone": 0,
+        "metal": 0,
+        "scrap": 0,
+        "barrels": 0,
+        "builds": 0
+      },
+      "label": "Player 4"
+    }
+  ]
+}

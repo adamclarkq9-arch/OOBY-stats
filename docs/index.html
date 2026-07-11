@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQUAD LEADERBOARD // RUST</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Barlow+Condensed:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#17120C;
+    --panel:#201A12;
+    --panel-2:#28211660;
+    --line:#382E20;
+    --text:#D8CCB4;
+    --dim:#928770;
+    --oxide:#C8451F;
+    --oxide-hi:#E85B2E;
+    --olive:#8B9457;
+    --stencil:'Saira Stencil One',sans-serif;
+    --cond:'Barlow Condensed',sans-serif;
+    --mono:'IBM Plex Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{background:var(--bg)}
+  body{
+    font-family:var(--cond);
+    color:var(--text);
+    background:var(--bg);
+    min-height:100vh;
+    padding:clamp(16px,4vw,48px);
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+
+  header{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:16px;flex-wrap:wrap;margin-bottom:14px;
+  }
+  h1{
+    font-family:var(--stencil);
+    font-weight:400;
+    font-size:clamp(28px,5vw,46px);
+    letter-spacing:.04em;
+    line-height:1;
+    color:var(--text);
+    text-transform:uppercase;
+  }
+  h1 .ox{color:var(--oxide-hi)}
+  .stamp{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--dim);
+    text-align:right;
+    line-height:1.6;
+    text-transform:uppercase;
+  }
+  .stamp b{color:var(--olive);font-weight:600}
+
+  .hazard{
+    height:5px;
+    background:repeating-linear-gradient(-45deg,var(--oxide) 0 12px,transparent 12px 24px);
+    opacity:.55;
+    margin-bottom:26px;
+  }
+
+  .banner{
+    display:none;
+    font-family:var(--mono);font-size:12px;
+    color:var(--bg);background:var(--olive);
+    padding:8px 12px;margin-bottom:18px;
+    text-transform:uppercase;letter-spacing:.05em;
+  }
+  .banner.show{display:block}
+
+  .seg{display:inline-flex;border:1px solid var(--line);margin-bottom:16px}
+  .seg button{
+    font-family:var(--cond);font-weight:600;font-size:13px;
+    letter-spacing:.14em;text-transform:uppercase;
+    background:none;border:none;color:var(--dim);
+    padding:9px 18px;cursor:pointer;
+  }
+  .seg button:hover{color:var(--text)}
+  .seg button.on{background:var(--oxide);color:var(--bg)}
+  .seg button:focus-visible{outline:2px solid var(--oxide);outline-offset:2px}
+
+  .scroll{overflow-x:auto;border:1px solid var(--line);background:var(--panel)}
+  table{width:100%;min-width:880px;border-collapse:collapse}
+  thead th{
+    font-family:var(--cond);font-weight:600;
+    font-size:14px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--dim);
+    text-align:right;
+    padding:14px 14px 12px;
+    border-bottom:1px solid var(--line);
+    cursor:pointer;user-select:none;white-space:nowrap;
+  }
+  thead th:hover{color:var(--text)}
+  thead th.sorted{color:var(--oxide-hi);box-shadow:inset 0 -2px 0 var(--oxide)}
+  thead th .arrow{font-size:10px;margin-left:3px}
+  th.left,td.left{text-align:left}
+
+  tbody td{
+    font-family:var(--mono);font-size:14px;
+    text-align:right;
+    padding:12px 14px;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:nth-child(odd) td{background:var(--panel-2)}
+  tbody tr:hover td{background:#2E251860}
+
+  td.rank{
+    font-family:var(--stencil);font-size:20px;
+    color:var(--dim);width:64px;
+  }
+  tr.first td.rank{color:var(--oxide-hi)}
+
+  .player{display:flex;align-items:center;gap:12px}
+  .who{display:flex;flex-direction:column;line-height:1.2}
+  .alias{font-family:var(--mono);font-size:11px;color:var(--dim)}
+  .player img{
+    width:34px;height:34px;display:block;
+    border:1px solid var(--line);
+    filter:saturate(.85);
+  }
+  .player a{
+    font-family:var(--cond);font-weight:500;font-size:17px;
+    color:var(--text);text-decoration:none;letter-spacing:.02em;
+  }
+  .player a:hover{color:var(--oxide-hi)}
+  .player a:focus-visible{outline:2px solid var(--oxide);outline-offset:2px}
+
+  td.top{color:var(--oxide-hi);font-weight:600}
+  tr.private td{color:var(--dim)}
+  tr.private .player a{color:var(--dim)}
+  .priv-label{
+    font-family:var(--cond);font-size:13px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--dim);
+  }
+
+  footer{
+    display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    margin-top:14px;
+    font-family:var(--mono);font-size:11px;color:var(--dim);
+    text-transform:uppercase;letter-spacing:.04em;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    tbody tr{transition:background .12s}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Squad<span class="ox">_</span>Leaderboard</h1>
+    <div class="stamp">
+      Rust // Steam AppID 252490<br>
+      Last sweep: <b id="updated">—</b>
+    </div>
+  </header>
+  <div class="hazard"></div>
+
+  <div class="banner" id="banner">Sample data — run the “Update stats” workflow on GitHub to pull real numbers</div>
+
+  <div class="seg">
+    <button id="btn-rate" class="on" onclick="setMode('rate')">Per hour</button>
+    <button id="btn-total" onclick="setMode('total')">Totals</button>
+  </div>
+
+  <div class="scroll">
+    <table id="board">
+      <thead><tr id="headrow"></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <footer>
+    <span>Refreshes every 6 hours via GitHub Actions</span>
+    <span>Source: Steam Web API · Private profiles show no stats</span>
+  </footer>
+</div>
+
+<script>
+const COLS = [
+  {key:"hours",   label:"Hours", dec:1, noRate:true},
+  {key:"kills",   label:"Kills"},
+  {key:"deaths",  label:"Deaths"},
+  {key:"kd",      label:"K/D", dec:2, noRate:true},
+  {key:"wood",    label:"Wood"},
+  {key:"stone",   label:"Stone"},
+  {key:"metal",   label:"Metal Ore"},
+  {key:"scrap",   label:"Scrap"},
+  {key:"barrels", label:"Barrels"},
+  {key:"builds",  label:"Builds"},
+];
+
+let mode = "rate"; // "rate" = per hour, "total" = lifetime totals
+
+/* Shown only if data.json can't be fetched (e.g. previewing the file locally). */
+const FALLBACK = {
+  updated: null,
+  placeholder: true,
+  players: [
+    {steamid:"76561198328433034", label:"Player 1", name:"xX_RatKing_Xx",  avatar:"", profile_url:"#", private:false,
+     stats:{hours:1450.5, kills:412, deaths:305, kd:1.35, wood:184200, stone:96100, metal:41800, scrap:12750, barrels:1630, builds:2210}},
+    {steamid:"76561198329843176", label:"Player 2", name:"doorcamper9000",  avatar:"", profile_url:"#", private:false,
+     stats:{hours:2210.0, kills:388, deaths:412, kd:0.94, wood:243500, stone:120400, metal:38200, scrap:9980, barrels:1215, builds:3480}},
+    {steamid:"76561198982508980", label:"Player 3", name:"scrap goblin",avatar:"", profile_url:"#", private:false,
+     stats:{hours:980.2, kills:511, deaths:298, kd:1.71, wood:98700, stone:64200, metal:55600, scrap:15320, barrels:2040, builds:1120}},
+    {steamid:"76561199044926383", label:"Player 4", name:"anon", avatar:"", profile_url:"#", private:true, stats:{}},
+  ]
+};
+
+let data = null;
+let sortKey = "kills";
+let sortDir = -1;
+
+const fmt = (v, dec) => (v ?? 0).toLocaleString("en-GB",
+  dec ? {minimumFractionDigits:dec, maximumFractionDigits:dec} : {});
+
+/* value shown for a stat in the current mode; null = not computable */
+function displayVal(p, c){
+  const v = p.stats[c.key] ?? 0;
+  if (c.noRate || mode === "total") return v;
+  const h = p.stats.hours ?? 0;
+  return h > 0 ? v / h : null;
+}
+
+function fmtCell(v, c){
+  if (v === null) return "—";
+  if (c.dec !== undefined) return fmt(v, c.dec);
+  if (mode === "total" || c.noRate) return fmt(v);
+  const dec = v >= 100 ? 0 : v >= 10 ? 1 : 2;
+  return fmt(v, dec);
+}
+
+function buildHead(){
+  const tr = document.getElementById("headrow");
+  tr.innerHTML = "";
+  const rank = document.createElement("th");
+  rank.textContent = "#"; rank.className = "left"; rank.style.cursor = "default";
+  tr.appendChild(rank);
+  const name = document.createElement("th");
+  name.textContent = "Player"; name.className = "left"; name.style.cursor = "default";
+  tr.appendChild(name);
+  for (const c of COLS){
+    const th = document.createElement("th");
+    const suffix = (mode === "rate" && !c.noRate) ? "/hr" : "";
+    th.innerHTML = c.label + suffix + (c.key === sortKey ? `<span class="arrow">${sortDir<0?"▼":"▲"}</span>` : "");
+    if (c.key === sortKey) th.classList.add("sorted");
+    th.onclick = () => {
+      sortDir = (c.key === sortKey) ? -sortDir : -1;
+      sortKey = c.key;
+      render();
+    };
+    tr.appendChild(th);
+  }
+}
+
+function render(){
+  buildHead();
+  const tbody = document.getElementById("rows");
+  tbody.innerHTML = "";
+
+  const sortCol = COLS.find(c => c.key === sortKey);
+  const players = [...data.players].sort((a,b) => {
+    if (a.private !== b.private) return a.private ? 1 : -1;
+    const av = displayVal(a, sortCol) ?? -1, bv = displayVal(b, sortCol) ?? -1;
+    return (bv - av) * (sortDir < 0 ? 1 : -1);
+  });
+
+  // column leaders (among public profiles, in the current mode)
+  const leaders = {};
+  for (const c of COLS){
+    leaders[c.key] = Math.max(...players.filter(p=>!p.private).map(p => displayVal(p, c) ?? 0), 0);
+  }
+
+  players.forEach((p, i) => {
+    const tr = document.createElement("tr");
+    if (i === 0 && !p.private) tr.classList.add("first");
+    if (p.private) tr.classList.add("private");
+
+    const rank = document.createElement("td");
+    rank.className = "rank left";
+    rank.textContent = String(i+1).padStart(2,"0");
+    tr.appendChild(rank);
+
+    const name = document.createElement("td");
+    name.className = "left";
+    const av = p.avatar ? `<img src="${p.avatar}" alt="">` : "";
+    const main = p.label || p.name;
+    const sub = (p.label && p.label !== p.name) ? `<span class="alias">${p.name}</span>` : "";
+    name.innerHTML = `<span class="player">${av}<span class="who"><a href="${p.profile_url}" target="_blank" rel="noopener">${main}</a>${sub}</span></span>`;
+    tr.appendChild(name);
+
+    if (p.private){
+      const td = document.createElement("td");
+      td.colSpan = COLS.length;
+      td.innerHTML = `<span class="priv-label">Private profile — no stats shared</span>`;
+      tr.appendChild(td);
+    } else {
+      for (const c of COLS){
+        const td = document.createElement("td");
+        const v = displayVal(p, c);
+        td.textContent = fmtCell(v, c);
+        if (v !== null && v > 0 && v === leaders[c.key]) td.classList.add("top");
+        tr.appendChild(td);
+      }
+    }
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById("updated").textContent = data.updated
+    ? new Date(data.updated).toLocaleString("en-GB", {dateStyle:"medium", timeStyle:"short"})
+    : "awaiting first run";
+  document.getElementById("banner").classList.toggle("show", !!data.placeholder);
+}
+
+function setMode(m){
+  mode = m;
+  document.getElementById("btn-rate").classList.toggle("on", m === "rate");
+  document.getElementById("btn-total").classList.toggle("on", m === "total");
+  render();
+}
+
+fetch("data.json", {cache:"no-store"})
+  .then(r => { if(!r.ok) throw new Error(); return r.json(); })
+  .then(d => { data = d; render(); })
+  .catch(() => { data = FALLBACK; render(); });
+</script>
+</body>
+</html>
