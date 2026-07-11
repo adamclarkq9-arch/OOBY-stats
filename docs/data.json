@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T06:23:00+00:00",
+  "updated": "2026-07-11T06:47:45+00:00",
   "placeholder": false,
   "players": [
     {
@@ -137,7 +137,7 @@
         "barrels": 16663,
         "builds": 597256,
         "kd": 1.47,
-        "hours": 4714.0
+        "hours": 4714.5
       },
       "raw": {
         "deaths": 8422,
@@ -184,21 +184,21 @@
         "wounded_healed": 215,
         "bullet_hit_playercorpse": 4950,
         "bullet_hit_corpse": 341,
-        "INVENTORY_OPENED": 796193,
-        "CRAFTING_OPENED": 74872,
+        "INVENTORY_OPENED": 796210,
+        "CRAFTING_OPENED": 74873,
         "harvested_wood": 3289418,
         "harvested_stones": 3732341,
-        "MAP_OPENED": 140964,
+        "MAP_OPENED": 140970,
         "CUPBOARD_OPENED": 54367,
         "ITEM_EXAMINED": 2150,
         "ORE_HIT": 99170,
         "TREE_HIT": 65952,
-        "comfort_duration": 1314029.375,
+        "comfort_duration": 1315139.25,
         "calories_consumed": 1232752.75,
         "water_consumed": 421855.15625,
         "pickup_category_food": 1963,
         "radiation_exposure_duration": 19562.390625,
-        "cold_exposure_duration": 2774064.75,
+        "cold_exposure_duration": 2774118.75,
         "hot_exposure_duration": 323934.90625,
         "melee_strikes": 247279,
         "melee_thrown": 2352,
@@ -211,7 +211,7 @@
         "acquired_lowgradefuel": 166677,
         "acquired_metal.ore": 2461495,
         "acquired_scrap": 155764,
-        "topology_road_duration": 114000,
+        "topology_road_duration": 114005,
         "destroyed_barrels": 16663,
         "horse_distance_ridden": 496618,
         "helipad_landings": 58,
@@ -240,7 +240,7 @@
         "hoses_connected": 75,
         "pipes_connected": 1119,
         "tincanalarms_wired": 11,
-        "scope_zoom_changed": 2585,
+        "scope_zoom_changed": 2591,
         "horse_mounted_count": 1895,
         "bee_attacks_count": 29,
         "snake_hazard_failed_count": 15,
@@ -248,7 +248,7 @@
         "boat_steering_wheel_placed_count": 2,
         "boat_steering_wheel_mounted_count": 67,
         "STAT_LOOT_MAINLAND": 764,
-        "distance_in_water_mainland": 7578.29736328125
+        "distance_in_water_mainland": 7627.228515625
       }
     },
     {
@@ -397,7 +397,7 @@
         "barrels": 2477,
         "builds": 5361,
         "kd": 1.09,
-        "hours": 626.0
+        "hours": 626.5
       },
       "raw": {
         "deaths": 969,
@@ -517,14 +517,14 @@
       "stats": {
         "kills": 1785,
         "deaths": 2628,
-        "wood": 1396053,
-        "stone": 691439,
+        "wood": 1397261,
+        "stone": 691489,
         "metal": 486990,
-        "scrap": 24414,
-        "barrels": 2256,
+        "scrap": 24474,
+        "barrels": 2292,
         "builds": 12949,
         "kd": 0.68,
-        "hours": 926.4
+        "hours": 926.9
       },
       "raw": {
         "deaths": 2628,
@@ -574,35 +574,35 @@
         "wounded_healed": 115,
         "bullet_hit_playercorpse": 1024,
         "bullet_hit_corpse": 82,
-        "INVENTORY_OPENED": 167016,
-        "CRAFTING_OPENED": 3946,
-        "harvested_wood": 1396053,
-        "harvested_stones": 691439,
-        "MAP_OPENED": 29115,
+        "INVENTORY_OPENED": 167108,
+        "CRAFTING_OPENED": 3952,
+        "harvested_wood": 1397261,
+        "harvested_stones": 691489,
+        "MAP_OPENED": 29125,
         "CUPBOARD_OPENED": 7267,
         "ITEM_EXAMINED": 92,
         "ORE_HIT": 13810,
-        "TREE_HIT": 24178,
+        "TREE_HIT": 24215,
         "comfort_duration": 283224.59375,
-        "calories_consumed": 356799.75,
-        "water_consumed": 134803.515625,
+        "calories_consumed": 357280,
+        "water_consumed": 134993.859375,
         "pickup_category_food": 1153,
         "radiation_exposure_duration": 4073.497314453125,
-        "cold_exposure_duration": 278561.96875,
+        "cold_exposure_duration": 278743,
         "hot_exposure_duration": 42641.96875,
-        "melee_strikes": 75863,
+        "melee_strikes": 75940,
         "melee_thrown": 839,
         "placed_blocks": 12949,
         "upgraded_blocks": 6367,
         "arrows_shot": 4150,
         "seconds_speaking": 5527.73388671875,
-        "harvested_cloth": 23492,
+        "harvested_cloth": 23713,
         "harvested_leather": 11744,
-        "acquired_lowgradefuel": 17442,
+        "acquired_lowgradefuel": 17482,
         "acquired_metal.ore": 486990,
-        "acquired_scrap": 24414,
-        "topology_road_duration": 30545,
-        "destroyed_barrels": 2256,
+        "acquired_scrap": 24474,
+        "topology_road_duration": 30620,
+        "destroyed_barrels": 2292,
         "horse_distance_ridden": 97844,
         "helipad_landings": 8,
         "cargoship_bridge_visits": 1,
@@ -631,7 +631,7 @@
         "bee_attacks_count": 3,
         "snake_hazard_failed_count": 2,
         "STAT_LOOT_MAINLAND": 105,
-        "distance_in_water_mainland": 1577.89892578125
+        "distance_in_water_mainland": 1868.135498046875
       }
     }
   ]
