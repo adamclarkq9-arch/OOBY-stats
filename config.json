@@ -1,9 +1,9 @@
 {
   "players": [
-    { "steam_id": "76561198328433034", "label": "Player 1" },
-    { "steam_id": "76561198329843176", "label": "Player 2" },
-    { "steam_id": "76561198982508980", "label": "Player 3" },
-    { "steam_id": "76561199044926383", "label": "Player 4" },
-    { "steam_id": "76561199018838678", "label": "Player 5" }
+    { "steam_id": "76561198328433034", "label": "Ronan" },
+    { "steam_id": "76561198329843176", "label": "Harvey" },
+    { "steam_id": "76561198982508980", "label": "Hudson" },
+    { "steam_id": "76561199044926383", "label": "Adam" },
+    { "steam_id": "76561199018838678", "label": "Harry" }
   ]
 }
