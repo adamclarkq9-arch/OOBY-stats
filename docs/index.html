@@ -235,6 +235,39 @@
   .modal-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
   .up-status{font-family:var(--mono);font-size:11px;color:var(--olive);text-transform:uppercase}
   .up-status.err{color:var(--oxide-hi)}
+
+  .standings{margin-bottom:34px}
+  .stand-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+  .standings h2{
+    font-family:var(--stencil);font-weight:400;
+    font-size:clamp(20px,3.4vw,30px);
+    letter-spacing:.04em;text-transform:uppercase;color:var(--text);
+  }
+  .standings h2 .ox{color:var(--oxide-hi)}
+  .stand-note{font-family:var(--mono);font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.03em}
+  .stand-row{
+    display:flex;align-items:center;gap:14px;
+    border:1px solid var(--line);border-bottom:none;
+    background:var(--panel);padding:10px 14px;
+  }
+  .stand-row:nth-child(odd){background:var(--panel-2)}
+  .stand-row:last-child{border-bottom:1px solid var(--line)}
+  .stand-row .rank{font-family:var(--stencil);font-size:22px;color:var(--dim);width:44px;flex:none}
+  .stand-row.first .rank{color:var(--oxide-hi)}
+  .stand-row img{width:34px;height:34px;flex:none;border:1px solid var(--line);filter:saturate(.85)}
+  .stand-who{display:flex;flex-direction:column;line-height:1.2;min-width:110px}
+  .stand-name{font-family:var(--cond);font-weight:500;font-size:17px;letter-spacing:.02em}
+  .stand-sub{font-family:var(--mono);font-size:10px;color:var(--dim);text-transform:uppercase}
+  .stand-bar{flex:1;height:8px;background:var(--bg);border:1px solid var(--line);overflow:hidden}
+  .stand-bar i{display:block;height:100%;background:var(--olive)}
+  .stand-row.first .stand-bar i{background:var(--oxide)}
+  .stand-pts{font-family:var(--mono);font-weight:600;font-size:17px;width:86px;text-align:right;flex:none}
+  .stand-pts small{font-size:10px;color:var(--dim);font-weight:400;margin-left:4px;text-transform:uppercase}
+  .stand-row.first .stand-pts{color:var(--oxide-hi)}
+  @media (max-width:560px){
+    .stand-note{display:none}
+    .stand-sub{display:none}
+  }
   @media (prefers-reduced-motion: no-preference){
     tbody tr{transition:background .12s}
   }
@@ -250,6 +283,14 @@
     </div>
   </header>
   <div class="hazard"></div>
+
+  <section class="standings" id="standings" hidden>
+    <div class="stand-head">
+      <h2>Season<span class="ox">_</span>Standings</h2>
+      <span class="stand-note">5 pts per category lead &middot; per-hour stats &middot; fewest deaths/hr scores top &middot; k/d not scored</span>
+    </div>
+    <div id="stand-rows"></div>
+  </section>
 
   <div class="banner" id="banner">Sample data — run the “Update stats” workflow on GitHub to pull real numbers</div>
 
@@ -587,6 +628,98 @@ function wireUploads(){
   drop.ondragleave = () => { if (!pickedFile) drop.classList.remove("armed"); };
   drop.ondrop = e => { e.preventDefault(); takeFile(e.dataTransfer.files[0]); };
   document.addEventListener("paste", e => {
+    if (modal.hidden) return;
+    const f = [...(e.clipboardData?.files || [])][0];
+    if (f) takeFile(f);
+  });
+  $("up-pass").oninput = armUpload;
+  $("up-send").onclick = sendShot;
+}
+wireUploads();
+
+/* ---- Season standings: points across the per-hour categories ---- */
+const SCORED = [
+  {key:"kills"}, {key:"deaths", invert:true}, {key:"wood"}, {key:"stone"},
+  {key:"metal"}, {key:"scrap"}, {key:"barrels"}, {key:"builds"},
+];
+
+function rateOf(p, key){
+  const h = p.stats.hours ?? 0;
+  return h > 0 ? (p.stats[key] ?? 0) / h : null;
+}
+
+function computeStandings(){
+  const elig = data.players.filter(p => !p.private && (p.stats.hours ?? 0) > 0);
+  const N = elig.length;
+  if (N < 2) return {rows: [], unranked: data.players.filter(p => !elig.includes(p))};
+  const totals = new Map(elig.map(p => [p.steamid, {p, pts: 0, leads: 0}]));
+
+  for (const cat of SCORED){
+    const ranked = [...elig].sort((a, b) => {
+      const av = rateOf(a, cat.key), bv = rateOf(b, cat.key);
+      return cat.invert ? av - bv : bv - av;
+    });
+    let i = 0;
+    while (i < N){
+      let j = i; // extend over ties: same rate = same points
+      while (j + 1 < N && rateOf(ranked[j+1], cat.key) === rateOf(ranked[i], cat.key)) j++;
+      const pts = N - i; // 1st of 5 -> 5 pts ... last -> 1 pt
+      for (let k = i; k <= j; k++){
+        const t = totals.get(ranked[k].steamid);
+        t.pts += pts;
+        if (i === 0) t.leads++;
+      }
+      i = j + 1;
+    }
+  }
+  return {
+    rows: [...totals.values()].sort((a, b) => b.pts - a.pts),
+    unranked: data.players.filter(p => !elig.includes(p)),
+  };
+}
+
+function renderStandings(){
+  const {rows, unranked} = computeStandings();
+  if (!rows.length) return;
+  const holder = document.getElementById("stand-rows");
+  holder.innerHTML = "";
+  const maxPts = rows[0].pts;
+  let rank = 0, prevPts = null;
+
+  rows.forEach((t, i) => {
+    if (t.pts !== prevPts){ rank = i + 1; prevPts = t.pts; }
+    const div = document.createElement("div");
+    div.className = "stand-row" + (rank === 1 ? " first" : "");
+    const av = t.p.avatar ? `<img src="${t.p.avatar}" alt="">` : "";
+    const leadTxt = t.leads ? `leads ${t.leads} of ${SCORED.length} categories` : "no category leads";
+    div.innerHTML =
+      `<span class="rank">${String(rank).padStart(2,"0")}</span>${av}` +
+      `<span class="stand-who"><span class="stand-name">${t.p.label || t.p.name}</span><span class="stand-sub">${leadTxt}</span></span>` +
+      `<span class="stand-bar"><i style="width:${(t.pts / maxPts * 100).toFixed(1)}%"></i></span>` +
+      `<span class="stand-pts">${t.pts}<small>pts</small></span>`;
+    holder.appendChild(div);
+  });
+
+  for (const p of unranked){
+    const div = document.createElement("div");
+    div.className = "stand-row";
+    div.innerHTML =
+      `<span class="rank">—</span>` +
+      `<span class="stand-who"><span class="stand-name">${p.label || p.name}</span></span>` +
+      `<span class="stand-sub">unranked — ${p.private ? "private profile" : "hours hidden"}</span>`;
+    holder.appendChild(div);
+  }
+  document.getElementById("standings").hidden = false;
+}
+
+fetch("data.json", {cache:"no-store"})
+  .then(r => { if(!r.ok) throw new Error(); return r.json(); })
+  .then(d => { data = d; render(); renderStandings(); })
+  .catch(() => { data = FALLBACK; render(); renderStandings(); });
+</script>
+</body>
+</html>
+
     if (modal.hidden) return;
     const f = [...(e.clipboardData?.files || [])][0];
     if (f) takeFile(f);
