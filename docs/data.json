@@ -1,10 +1,10 @@
 {
-  "updated": "2026-07-11T06:20:08+00:00",
+  "updated": "2026-07-11T06:23:00+00:00",
   "placeholder": false,
   "players": [
     {
       "steamid": "76561198328433034",
-      "label": "Player 1",
+      "label": "Ronan",
       "name": "[OOBY] ItsBlitz",
       "avatar": "https://avatars.steamstatic.com/eb318bdd2cee06babe284ff900debf5949e8ef8c_full.jpg",
       "profile_url": "https://steamcommunity.com/profiles/76561198328433034/",
@@ -122,7 +122,7 @@
     },
     {
       "steamid": "76561198329843176",
-      "label": "Player 2",
+      "label": "Harvey",
       "name": "[OOBY] CHINA #1",
       "avatar": "https://avatars.steamstatic.com/d3003a7b202188a6d4280ef612f578cc3899a984_full.jpg",
       "profile_url": "https://steamcommunity.com/profiles/76561198329843176/",
@@ -253,7 +253,7 @@
     },
     {
       "steamid": "76561198982508980",
-      "label": "Player 3",
+      "label": "Hudson",
       "name": "[OOBY] Grub",
       "avatar": "https://avatars.steamstatic.com/86e289627d8c3b4ca217a6b2a5a084b140aaa4de_full.jpg",
       "profile_url": "https://steamcommunity.com/profiles/76561198982508980/",
@@ -382,7 +382,7 @@
     },
     {
       "steamid": "76561199044926383",
-      "label": "Player 4",
+      "label": "Adam",
       "name": "[OOBY] Goblin",
       "avatar": "https://avatars.steamstatic.com/a561c579995302bedcac669f944c78f5ced07a25_full.jpg",
       "profile_url": "https://steamcommunity.com/id/mrglit/",
@@ -509,7 +509,7 @@
     },
     {
       "steamid": "76561199018838678",
-      "label": "Player 5",
+      "label": "Harry",
       "name": "[OOBEE]planedlump",
       "avatar": "https://avatars.steamstatic.com/983f461a43abc8d5450a5c1985e3cbce03dc7055_full.jpg",
       "profile_url": "https://steamcommunity.com/profiles/76561199018838678/",
