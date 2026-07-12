@@ -349,7 +349,7 @@
 const COLS = [
   {key:"hours",   label:"Hours", dec:1, noRate:true},
   {key:"kills",   label:"Kills"},
-  {key:"deaths",  label:"Deaths"},
+  {key:"deaths",  label:"Deaths", invert:true},
   {key:"kd",      label:"K/D", dec:2, noRate:true},
   {key:"wood",    label:"Wood"},
   {key:"stone",   label:"Stone"},
@@ -437,7 +437,8 @@ function render(){
   // column leaders (among public profiles, in the current mode)
   const leaders = {};
   for (const c of COLS){
-    leaders[c.key] = Math.max(...players.filter(p=>!p.private).map(p => displayVal(p, c) ?? 0), 0);
+    const vals = players.filter(p=>!p.private).map(p => displayVal(p, c) ?? (c.invert ? Infinity : 0));
+    leaders[c.key] = c.invert ? Math.min(...vals) : Math.max(...vals, 0);
   }
 
   players.forEach((p, i) => {
@@ -468,7 +469,7 @@ function render(){
         const td = document.createElement("td");
         const v = displayVal(p, c);
         td.textContent = fmtCell(v, c);
-        if (v !== null && v > 0 && v === leaders[c.key]) td.classList.add("top");
+        if (v !== null && v === leaders[c.key] && (c.invert || v > 0)) td.classList.add("top");
         tr.appendChild(td);
       }
     }
@@ -719,3 +720,5 @@ fetch("data.json", {cache:"no-store"})
 </script>
 </body>
 </html>
+
+
