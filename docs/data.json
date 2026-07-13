@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T03:37:51+00:00",
+  "updated": "2026-07-13T09:40:07+00:00",
   "placeholder": false,
   "players": [
     {
@@ -137,7 +137,7 @@
         "barrels": 16663,
         "builds": 597271,
         "kd": 1.47,
-        "hours": 4720.5
+        "hours": 4727.0
       },
       "raw": {
         "deaths": 8428,
@@ -397,7 +397,7 @@
         "barrels": 2477,
         "builds": 5361,
         "kd": 1.09,
-        "hours": 627.3
+        "hours": 628.0
       },
       "raw": {
         "deaths": 969,
@@ -444,7 +444,7 @@
         "wounded_healed": 59,
         "bullet_hit_playercorpse": 633,
         "bullet_hit_corpse": 91,
-        "INVENTORY_OPENED": 91260,
+        "INVENTORY_OPENED": 91279,
         "CRAFTING_OPENED": 2330,
         "harvested_wood": 817665,
         "harvested_stones": 623505,
@@ -454,8 +454,8 @@
         "ORE_HIT": 17799,
         "TREE_HIT": 24004,
         "comfort_duration": 232133.4375,
-        "calories_consumed": 202772.78125,
-        "water_consumed": 54760.2890625,
+        "calories_consumed": 205897.046875,
+        "water_consumed": 56074.05078125,
         "pickup_category_food": 466,
         "radiation_exposure_duration": 3093.9091796875,
         "cold_exposure_duration": 191040.46875,
@@ -464,7 +464,7 @@
         "melee_thrown": 399,
         "placed_blocks": 5361,
         "upgraded_blocks": 2717,
-        "arrows_shot": 3547,
+        "arrows_shot": 3571,
         "seconds_speaking": 4893.2578125,
         "harvested_cloth": 21832,
         "harvested_leather": 12959,
@@ -482,7 +482,7 @@
         "InstrumentNotesPlayed": 47440,
         "InstrumentFullKeyboardMode": 34,
         "grenades_thrown": 211,
-        "gesture_wave_count": 271,
+        "gesture_wave_count": 272,
         "caught_anchovy": 5,
         "caught_herring": 1,
         "caught_sardine": 3,
