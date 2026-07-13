@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T09:40:07+00:00",
+  "updated": "2026-07-13T14:50:15+00:00",
   "placeholder": false,
   "players": [
     {
@@ -137,7 +137,7 @@
         "barrels": 16663,
         "builds": 597271,
         "kd": 1.47,
-        "hours": 4727.0
+        "hours": 4730.0
       },
       "raw": {
         "deaths": 8428,
@@ -184,7 +184,7 @@
         "wounded_healed": 215,
         "bullet_hit_playercorpse": 4950,
         "bullet_hit_corpse": 341,
-        "INVENTORY_OPENED": 796442,
+        "INVENTORY_OPENED": 796460,
         "CRAFTING_OPENED": 74896,
         "harvested_wood": 3289418,
         "harvested_stones": 3732341,
@@ -194,8 +194,8 @@
         "ORE_HIT": 99170,
         "TREE_HIT": 65952,
         "comfort_duration": 1315815.25,
-        "calories_consumed": 1232771.5,
-        "water_consumed": 421878.03125,
+        "calories_consumed": 1234680.125,
+        "water_consumed": 422698.21875,
         "pickup_category_food": 1963,
         "radiation_exposure_duration": 19562.390625,
         "cold_exposure_duration": 2774130,
@@ -204,7 +204,7 @@
         "melee_thrown": 2354,
         "placed_blocks": 597271,
         "upgraded_blocks": 168530,
-        "arrows_shot": 18337,
+        "arrows_shot": 18342,
         "seconds_speaking": 54314.15625,
         "harvested_cloth": 124855,
         "harvested_leather": 26487,
@@ -240,7 +240,7 @@
         "hoses_connected": 75,
         "pipes_connected": 1129,
         "tincanalarms_wired": 11,
-        "scope_zoom_changed": 2623,
+        "scope_zoom_changed": 2628,
         "horse_mounted_count": 1895,
         "bee_attacks_count": 29,
         "snake_hazard_failed_count": 15,
