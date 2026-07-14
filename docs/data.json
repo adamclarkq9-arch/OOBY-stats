@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T14:00:21+00:00",
+  "updated": "2026-07-14T16:33:59+00:00",
   "placeholder": false,
   "players": [
     {
@@ -260,7 +260,7 @@
       "private": false,
       "stats": {
         "kills": 3987,
-        "deaths": 4475,
+        "deaths": 4476,
         "wood": 1948546,
         "stone": 2264925,
         "metal": 1731067,
@@ -268,10 +268,10 @@
         "barrels": 15846,
         "builds": 14462,
         "kd": 0.89,
-        "hours": 1921.4
+        "hours": 1921.6
       },
       "raw": {
-        "deaths": 4475,
+        "deaths": 4476,
         "bullet_fired": 155955,
         "arrow_fired": 8891,
         "rocket_fired": 162,
@@ -309,16 +309,16 @@
         "bullet_hit_wolf": 319,
         "bullet_hit_boar": 405,
         "bullet_hit_sign": 18,
-        "wounded": 2435,
+        "wounded": 2436,
         "wounded_assisted": 138,
         "wounded_healed": 132,
         "bullet_hit_playercorpse": 1164,
         "bullet_hit_corpse": 116,
-        "INVENTORY_OPENED": 404427,
+        "INVENTORY_OPENED": 404429,
         "CRAFTING_OPENED": 21120,
         "harvested_wood": 1948546,
         "harvested_stones": 2264925,
-        "MAP_OPENED": 134503,
+        "MAP_OPENED": 134513,
         "CUPBOARD_OPENED": 19907,
         "ITEM_EXAMINED": 27431,
         "ORE_HIT": 66200,
@@ -328,10 +328,10 @@
         "water_consumed": 325758.625,
         "pickup_category_food": 1992,
         "radiation_exposure_duration": 19603.650390625,
-        "cold_exposure_duration": 793978.25,
+        "cold_exposure_duration": 794020.8125,
         "hot_exposure_duration": 137245.28125,
         "melee_strikes": 171141,
-        "melee_thrown": 799,
+        "melee_thrown": 800,
         "placed_blocks": 14462,
         "upgraded_blocks": 11130,
         "arrows_shot": 8534,
@@ -341,7 +341,7 @@
         "acquired_lowgradefuel": 57166,
         "acquired_metal.ore": 1731067,
         "acquired_scrap": 73780,
-        "topology_road_duration": 89780,
+        "topology_road_duration": 89790,
         "destroyed_barrels": 15846,
         "horse_distance_ridden": 298448,
         "helipad_landings": 19,
@@ -377,7 +377,7 @@
         "boat_steering_wheel_placed_count": 2,
         "boat_steering_wheel_mounted_count": 222,
         "STAT_LOOT_MAINLAND": 810,
-        "distance_in_water_mainland": 6374.75
+        "distance_in_water_mainland": 6419.06494140625
       }
     },
     {
@@ -397,7 +397,7 @@
         "barrels": 2477,
         "builds": 5361,
         "kd": 1.09,
-        "hours": 628.0
+        "hours": 628.5
       },
       "raw": {
         "deaths": 969,
@@ -410,16 +410,16 @@
         "death_fall": 11,
         "death_selfinflicted": 8,
         "kill_player": 1054,
-        "bullet_hit_player": 18438,
+        "bullet_hit_player": 18756,
         "arrow_hit_entity": 61,
-        "bullet_hit_entity": 7067,
+        "bullet_hit_entity": 7144,
         "arrow_hit_building": 17,
         "kill_bear": 54,
         "kill_boar": 81,
         "kill_stag": 18,
         "kill_chicken": 14,
         "kill_wolf": 30,
-        "headshot": 3282,
+        "headshot": 3301,
         "arrow_hit_boar": 126,
         "arrow_hit_bear": 62,
         "arrow_hit_wolf": 51,
