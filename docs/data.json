@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T03:19:06+00:00",
+  "updated": "2026-07-16T08:24:51+00:00",
   "placeholder": false,
   "players": [
     {
@@ -397,11 +397,11 @@
         "barrels": 2501,
         "builds": 5376,
         "kd": 1.1,
-        "hours": 630.2
+        "hours": 631.2
       },
       "raw": {
         "deaths": 997,
-        "bullet_fired": 69051,
+        "bullet_fired": 69135,
         "arrow_fired": 1327,
         "rocket_fired": 72,
         "item_drop": 3172,
@@ -425,7 +425,7 @@
         "arrow_hit_wolf": 51,
         "arrow_hit_stag": 24,
         "arrow_hit_chicken": 5,
-        "bullet_hit_building": 2163,
+        "bullet_hit_building": 2165,
         "arrow_hit_player": 247,
         "death_entity": 144,
         "death_wolf": 7,
