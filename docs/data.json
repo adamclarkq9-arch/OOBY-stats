@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T19:13:20+00:00",
+  "updated": "2026-07-19T03:31:46+00:00",
   "placeholder": false,
   "players": [
     {
@@ -137,14 +137,14 @@
         "barrels": 16758,
         "builds": 599742,
         "kd": 1.47,
-        "hours": 4784.1
+        "hours": 4784.6
       },
       "raw": {
         "deaths": 8504,
         "bullet_fired": 781924,
         "arrow_fired": 21104,
         "rocket_fired": 1026,
-        "item_drop": 47384,
+        "item_drop": 47386,
         "blueprint_studied": 3178,
         "death_suicide": 1426,
         "death_fall": 80,
