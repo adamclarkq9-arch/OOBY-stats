@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T08:50:17+00:00",
+  "updated": "2026-07-29T14:24:13+00:00",
   "placeholder": false,
   "players": [
     {
@@ -268,7 +268,7 @@
         "barrels": 15976,
         "builds": 14986,
         "kd": 0.91,
-        "hours": 1967.1
+        "hours": 1967.6
       },
       "raw": {
         "deaths": 4545,
