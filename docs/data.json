@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T06:50:39+00:00",
+  "updated": "2026-08-22T12:51:32+00:00",
   "placeholder": false,
   "players": [
     {
@@ -404,7 +404,7 @@
         "barrels": 2834,
         "builds": 6733,
         "kd": 1.1,
-        "hours": 748.9
+        "hours": 749.6
       },
       "raw": {
         "deaths": 1134,
@@ -460,9 +460,9 @@
         "ITEM_EXAMINED": 274,
         "ORE_HIT": 22032,
         "TREE_HIT": 28388,
-        "comfort_duration": 307042.125,
-        "calories_consumed": 354842.15625,
-        "water_consumed": 115747.5,
+        "comfort_duration": 307046.375,
+        "calories_consumed": 354850.375,
+        "water_consumed": 115755.8828125,
         "pickup_category_food": 608,
         "radiation_exposure_duration": 3799.19482421875,
         "cold_exposure_duration": 236474.3125,
