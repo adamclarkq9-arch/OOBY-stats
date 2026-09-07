@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T12:10:38+00:00",
+  "updated": "2026-09-07T21:23:38+00:00",
   "placeholder": false,
   "players": [
     {
@@ -14,12 +14,12 @@
         "deaths": 1956,
         "wood": 1061611,
         "stone": 956135,
-        "metal": 1046417,
+        "metal": 1046467,
         "scrap": 20567,
         "barrels": 2812,
         "builds": 21155,
         "kd": 0.76,
-        "hours": 1036.6
+        "hours": 1036.7
       },
       "raw": {
         "deaths": 1956,
@@ -66,11 +66,11 @@
         "wounded_healed": 87,
         "bullet_hit_playercorpse": 804,
         "bullet_hit_corpse": 124,
-        "INVENTORY_OPENED": 234221,
+        "INVENTORY_OPENED": 234231,
         "CRAFTING_OPENED": 4332,
         "harvested_wood": 1061611,
         "harvested_stones": 956135,
-        "MAP_OPENED": 73241,
+        "MAP_OPENED": 73248,
         "CUPBOARD_OPENED": 10475,
         "ITEM_EXAMINED": 175,
         "ORE_HIT": 44241,
@@ -91,9 +91,9 @@
         "harvested_cloth": 48405,
         "harvested_leather": 10459,
         "acquired_lowgradefuel": 35198,
-        "acquired_metal.ore": 1046417,
+        "acquired_metal.ore": 1046467,
         "acquired_scrap": 20567,
-        "topology_road_duration": 38250,
+        "topology_road_duration": 38255,
         "destroyed_barrels": 2812,
         "horse_distance_ridden": 73341,
         "helipad_landings": 1,
@@ -119,7 +119,7 @@
         "snake_hazard_failed_count": 18,
         "boat_steering_wheel_placed_count": 4,
         "boat_steering_wheel_mounted_count": 77,
-        "STAT_LOOT_MAINLAND": 992,
+        "STAT_LOOT_MAINLAND": 993,
         "distance_in_water_mainland": 18068.431640625
       }
     },
