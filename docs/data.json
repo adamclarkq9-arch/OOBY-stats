@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T11:32:47+00:00",
+  "updated": "2026-09-13T16:01:13+00:00",
   "placeholder": false,
   "players": [
     {
@@ -132,7 +132,7 @@
       "private": false,
       "stats": {
         "kills": 12965,
-        "deaths": 8801,
+        "deaths": 8802,
         "wood": 3638518,
         "stone": 4156912,
         "metal": 2599853,
@@ -140,16 +140,16 @@
         "barrels": 17102,
         "builds": 615829,
         "kd": 1.47,
-        "hours": 4955.2
+        "hours": 4956.2
       },
       "raw": {
-        "deaths": 8801,
+        "deaths": 8802,
         "bullet_fired": 790152,
         "arrow_fired": 21574,
         "rocket_fired": 1026,
         "item_drop": 49407,
         "blueprint_studied": 3210,
-        "death_suicide": 1476,
+        "death_suicide": 1477,
         "death_fall": 80,
         "death_selfinflicted": 133,
         "kill_player": 12965,
