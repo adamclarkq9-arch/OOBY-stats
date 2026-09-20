@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T04:32:21+00:00",
+  "updated": "2026-09-20T11:05:08+00:00",
   "placeholder": false,
   "players": [
     {
@@ -657,7 +657,7 @@
       "private": false,
       "stats": {
         "kills": 30584,
-        "deaths": 18044,
+        "deaths": 18045,
         "wood": 2469518,
         "stone": 4533492,
         "metal": 8462279,
@@ -665,16 +665,16 @@
         "barrels": 33642,
         "builds": 320958,
         "kd": 1.69,
-        "hours": 9481.6
+        "hours": 9487.9
       },
       "raw": {
-        "deaths": 18044,
+        "deaths": 18045,
         "bullet_fired": 1263421,
         "arrow_fired": 44621,
         "rocket_fired": 2538,
-        "item_drop": 124543,
+        "item_drop": 124548,
         "blueprint_studied": 6817,
-        "death_suicide": 5336,
+        "death_suicide": 5337,
         "death_fall": 111,
         "death_selfinflicted": 162,
         "kill_player": 30584,
@@ -715,16 +715,16 @@
         "wounded_healed": 478,
         "bullet_hit_playercorpse": 8807,
         "bullet_hit_corpse": 583,
-        "INVENTORY_OPENED": 1800120,
+        "INVENTORY_OPENED": 1800130,
         "CRAFTING_OPENED": 87386,
         "harvested_wood": 2469518,
         "harvested_stones": 4533492,
-        "MAP_OPENED": 585694,
+        "MAP_OPENED": 585698,
         "CUPBOARD_OPENED": 75055,
         "ITEM_EXAMINED": 18128,
         "ORE_HIT": 186987,
         "TREE_HIT": 74815,
-        "comfort_duration": 2636522.25,
+        "comfort_duration": 2636560.5,
         "calories_consumed": 3135043.25,
         "water_consumed": 2135089,
         "pickup_category_food": 6363,
