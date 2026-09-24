@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T21:22:30+00:00",
+  "updated": "2026-09-24T04:19:44+00:00",
   "placeholder": false,
   "players": [
     {
@@ -665,7 +665,7 @@
         "barrels": 33642,
         "builds": 320995,
         "kd": 1.69,
-        "hours": 9492.8
+        "hours": 9493.1
       },
       "raw": {
         "deaths": 18057,
@@ -678,10 +678,10 @@
         "death_fall": 111,
         "death_selfinflicted": 163,
         "kill_player": 30602,
-        "bullet_hit_player": 344627,
+        "bullet_hit_player": 345207,
         "arrow_hit_entity": 3749,
         "harvest.stones": 75375,
-        "bullet_hit_entity": 158750,
+        "bullet_hit_entity": 158867,
         "harvest.cloth": 23829,
         "harvest.wood": 66399,
         "arrow_hit_building": 1387,
@@ -690,7 +690,7 @@
         "kill_stag": 33,
         "kill_chicken": 16,
         "kill_wolf": 306,
-        "headshot": 68382,
+        "headshot": 68478,
         "arrow_hit_boar": 425,
         "arrow_hit_bear": 348,
         "arrow_hit_wolf": 206,
@@ -715,7 +715,7 @@
         "wounded_healed": 479,
         "bullet_hit_playercorpse": 8814,
         "bullet_hit_corpse": 584,
-        "INVENTORY_OPENED": 1800683,
+        "INVENTORY_OPENED": 1800688,
         "CRAFTING_OPENED": 87391,
         "harvested_wood": 2469518,
         "harvested_stones": 4533492,
@@ -725,8 +725,8 @@
         "ORE_HIT": 186987,
         "TREE_HIT": 74815,
         "comfort_duration": 2636647.5,
-        "calories_consumed": 3145948.75,
-        "water_consumed": 2139635.75,
+        "calories_consumed": 3147925.75,
+        "water_consumed": 2140466.5,
         "pickup_category_food": 6363,
         "radiation_exposure_duration": 42113.96875,
         "cold_exposure_duration": 5422935,
