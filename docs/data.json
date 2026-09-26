@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T04:35:31+00:00",
+  "updated": "2026-09-26T11:11:01+00:00",
   "placeholder": false,
   "players": [
     {
@@ -666,7 +666,7 @@
         "barrels": 33710,
         "builds": 321187,
         "kd": 1.7,
-        "hours": 9498.6
+        "hours": 9499.0
       },
       "raw": {
         "deaths": 18060,
@@ -716,18 +716,18 @@
         "wounded_healed": 479,
         "bullet_hit_playercorpse": 8814,
         "bullet_hit_corpse": 584,
-        "INVENTORY_OPENED": 1802187,
-        "CRAFTING_OPENED": 87540,
+        "INVENTORY_OPENED": 1802191,
+        "CRAFTING_OPENED": 87541,
         "harvested_wood": 2470049,
         "harvested_stones": 4535042,
         "MAP_OPENED": 586138,
         "CUPBOARD_OPENED": 75140,
-        "ITEM_EXAMINED": 18148,
+        "ITEM_EXAMINED": 18150,
         "ORE_HIT": 187335,
         "TREE_HIT": 74817,
         "comfort_duration": 2639996.75,
-        "calories_consumed": 3152365.5,
-        "water_consumed": 2141902.25,
+        "calories_consumed": 3153515.25,
+        "water_consumed": 2142403,
         "pickup_category_food": 6366,
         "radiation_exposure_duration": 42116.703125,
         "cold_exposure_duration": 5423659,
@@ -737,7 +737,7 @@
         "placed_blocks": 321187,
         "upgraded_blocks": 209472,
         "arrows_shot": 51338,
-        "seconds_speaking": 245537.953125,
+        "seconds_speaking": 245538.703125,
         "harvested_cloth": 176061,
         "harvested_leather": 24835,
         "acquired_lowgradefuel": 548939,
