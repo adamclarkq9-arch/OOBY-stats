@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T11:11:01+00:00",
+  "updated": "2026-09-26T16:11:48+00:00",
   "placeholder": false,
   "players": [
     {
@@ -791,7 +791,7 @@
       "private": false,
       "stats": {
         "kills": 146,
-        "deaths": 596,
+        "deaths": 604,
         "wood": 374296,
         "stone": 134572,
         "metal": 650897,
@@ -799,21 +799,21 @@
         "barrels": 1665,
         "builds": 3927,
         "kd": 0.24,
-        "hours": 250.5
+        "hours": 252.5
       },
       "raw": {
-        "deaths": 596,
+        "deaths": 604,
         "bullet_fired": 10496,
         "arrow_fired": 614,
-        "item_drop": 2115,
+        "item_drop": 2127,
         "blueprint_studied": 22,
-        "death_suicide": 149,
+        "death_suicide": 150,
         "death_fall": 3,
         "death_selfinflicted": 1,
         "kill_player": 146,
         "bullet_hit_player": 2569,
         "arrow_hit_entity": 41,
-        "bullet_hit_entity": 2155,
+        "bullet_hit_entity": 2156,
         "arrow_hit_building": 16,
         "kill_bear": 11,
         "kill_boar": 29,
@@ -829,7 +829,7 @@
         "arrow_hit_player": 163,
         "death_entity": 48,
         "death_wolf": 5,
-        "death_bear": 9,
+        "death_bear": 10,
         "shotgun_fired": 1153,
         "shotgun_hit_building": 133,
         "shotgun_hit_player": 261,
@@ -838,7 +838,7 @@
         "bullet_hit_stag": 4,
         "bullet_hit_wolf": 26,
         "bullet_hit_boar": 92,
-        "wounded": 463,
+        "wounded": 465,
         "wounded_assisted": 22,
         "wounded_healed": 21,
         "bullet_hit_playercorpse": 62,
