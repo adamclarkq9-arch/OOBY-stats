@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T13:32:35+00:00",
+  "updated": "2026-09-28T23:07:51+00:00",
   "placeholder": false,
   "players": [
     {
@@ -666,7 +666,7 @@
         "barrels": 33710,
         "builds": 321187,
         "kd": 1.7,
-        "hours": 9499.9
+        "hours": 9500.5
       },
       "raw": {
         "deaths": 18060,
@@ -716,7 +716,7 @@
         "wounded_healed": 479,
         "bullet_hit_playercorpse": 8814,
         "bullet_hit_corpse": 584,
-        "INVENTORY_OPENED": 1802198,
+        "INVENTORY_OPENED": 1802201,
         "CRAFTING_OPENED": 87541,
         "harvested_wood": 2470049,
         "harvested_stones": 4535042,
@@ -726,8 +726,8 @@
         "ORE_HIT": 187335,
         "TREE_HIT": 74817,
         "comfort_duration": 2639996.75,
-        "calories_consumed": 3155452.25,
-        "water_consumed": 2143203,
+        "calories_consumed": 3156618.75,
+        "water_consumed": 2143668.5,
         "pickup_category_food": 6366,
         "radiation_exposure_duration": 42116.703125,
         "cold_exposure_duration": 5423659,
