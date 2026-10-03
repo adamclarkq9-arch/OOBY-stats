@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T04:54:35+00:00",
+  "updated": "2026-10-03T11:27:37+00:00",
   "placeholder": false,
   "players": [
     {
@@ -666,7 +666,7 @@
         "barrels": 33710,
         "builds": 321187,
         "kd": 1.7,
-        "hours": 9506.5
+        "hours": 9507.0
       },
       "raw": {
         "deaths": 18060,
@@ -790,8 +790,8 @@
       "profile_url": "https://steamcommunity.com/profiles/76561199791787717/",
       "private": false,
       "stats": {
-        "kills": 153,
-        "deaths": 636,
+        "kills": 154,
+        "deaths": 639,
         "wood": 374296,
         "stone": 134572,
         "metal": 675829,
@@ -799,19 +799,19 @@
         "barrels": 1846,
         "builds": 4556,
         "kd": 0.24,
-        "hours": 267.4
+        "hours": 268.0
       },
       "raw": {
-        "deaths": 636,
+        "deaths": 639,
         "bullet_fired": 10603,
         "arrow_fired": 667,
-        "item_drop": 2257,
+        "item_drop": 2258,
         "blueprint_studied": 22,
-        "death_suicide": 155,
+        "death_suicide": 156,
         "death_fall": 4,
         "death_selfinflicted": 1,
-        "kill_player": 153,
-        "bullet_hit_player": 2599,
+        "kill_player": 154,
+        "bullet_hit_player": 2601,
         "arrow_hit_entity": 45,
         "bullet_hit_entity": 2157,
         "arrow_hit_building": 23,
@@ -820,7 +820,7 @@
         "kill_stag": 2,
         "kill_chicken": 13,
         "kill_wolf": 3,
-        "headshot": 595,
+        "headshot": 596,
         "arrow_hit_boar": 12,
         "arrow_hit_bear": 7,
         "arrow_hit_stag": 1,
@@ -829,7 +829,7 @@
         "arrow_hit_player": 175,
         "death_entity": 52,
         "death_wolf": 5,
-        "death_bear": 10,
+        "death_bear": 12,
         "shotgun_fired": 1153,
         "shotgun_hit_building": 133,
         "shotgun_hit_player": 261,
@@ -838,7 +838,7 @@
         "bullet_hit_stag": 4,
         "bullet_hit_wolf": 26,
         "bullet_hit_boar": 92,
-        "wounded": 482,
+        "wounded": 485,
         "wounded_assisted": 22,
         "wounded_healed": 21,
         "bullet_hit_playercorpse": 62,
