@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T12:43:49+00:00",
+  "updated": "2026-10-29T22:38:41+00:00",
   "placeholder": false,
   "players": [
     {
@@ -132,8 +132,8 @@
       "profile_url": "https://steamcommunity.com/profiles/76561198329843176/",
       "private": false,
       "stats": {
-        "kills": 13091,
-        "deaths": 8913,
+        "kills": 13092,
+        "deaths": 8915,
         "wood": 3769871,
         "stone": 4268193,
         "metal": 2664410,
@@ -141,19 +141,19 @@
         "barrels": 17392,
         "builds": 643796,
         "kd": 1.47,
-        "hours": 5071.1
+        "hours": 5072.4
       },
       "raw": {
-        "deaths": 8913,
+        "deaths": 8915,
         "bullet_fired": 792041,
         "arrow_fired": 21823,
         "rocket_fired": 1026,
         "item_drop": 50022,
         "blueprint_studied": 3215,
-        "death_suicide": 1492,
+        "death_suicide": 1493,
         "death_fall": 81,
         "death_selfinflicted": 133,
-        "kill_player": 13091,
+        "kill_player": 13092,
         "bullet_hit_player": 243833,
         "arrow_hit_entity": 1167,
         "bullet_hit_entity": 69731,
@@ -163,7 +163,7 @@
         "kill_stag": 44,
         "kill_chicken": 31,
         "kill_wolf": 245,
-        "headshot": 51664,
+        "headshot": 51666,
         "arrow_hit_boar": 743,
         "arrow_hit_bear": 393,
         "arrow_hit_wolf": 379,
@@ -173,7 +173,7 @@
         "arrow_hit_player": 6999,
         "death_entity": 587,
         "death_wolf": 42,
-        "death_bear": 48,
+        "death_bear": 49,
         "shotgun_fired": 78460,
         "shotgun_hit_building": 4561,
         "shotgun_hit_player": 28407,
@@ -183,13 +183,13 @@
         "bullet_hit_wolf": 967,
         "bullet_hit_boar": 1552,
         "bullet_hit_sign": 114,
-        "wounded": 4840,
+        "wounded": 4841,
         "wounded_assisted": 327,
         "wounded_healed": 228,
         "bullet_hit_playercorpse": 5316,
         "bullet_hit_corpse": 400,
-        "INVENTORY_OPENED": 869890,
-        "CRAFTING_OPENED": 80047,
+        "INVENTORY_OPENED": 869891,
+        "CRAFTING_OPENED": 80049,
         "harvested_wood": 3769871,
         "harvested_stones": 4268193,
         "MAP_OPENED": 150129,
@@ -204,7 +204,7 @@
         "radiation_exposure_duration": 24380.1484375,
         "cold_exposure_duration": 2926172.25,
         "hot_exposure_duration": 339326.75,
-        "melee_strikes": 260647,
+        "melee_strikes": 260649,
         "melee_thrown": 2486,
         "placed_blocks": 643796,
         "upgraded_blocks": 199691,
@@ -254,7 +254,7 @@
         "STAT_LOOT_DEEPSEA": 5,
         "STAT_LOOT_MAINLAND": 1495,
         "distance_in_water_deepsea": 2841006.25,
-        "distance_in_water_mainland": 24084.361328125
+        "distance_in_water_mainland": 24096.591796875
       }
     },
     {
